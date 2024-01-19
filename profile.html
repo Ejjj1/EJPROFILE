@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EJ's Profile</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div id="header">
+  <nav class='navbar'>
+    <ul>
+        <li> <a href="#header-text">
+          Home</a></li>
+        <li> <a href="#about">
+          About me</a></li>
+          <li> <a href="#portfolio">
+          Portfolio</a></li>
+    </ul>
+  </nav>
+  <div class="header-text">
+    <p>Hi! I am</p>
+    <h1>So, EJ Karl Cedric B.</h1>
+    <p>An IT student from NU-Fairview who takes interests in<br>technologies, games and much more.</p>
+    <div class="home-sci">
+      <a href="https://github.com/Ejjj1" target="_blank"><i class='bx bxl-github'></i></a>
+      <a href="https://stackoverflow.com/users/21617701/dey?tab=profile" target="_blank"><i class='bx bxl-stack-overflow'></i></a>
+      <a href="https://www.facebook.com/ejkarlcedricso/" target="_blank"><i class='bx bxl-facebook-square' ></i></a>
+    </div>
+    <a href="So-resume.pdf" class="btn-box" target="_blank">Download Resume</a>
+  </div> 
+</div>
+
+<div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="about.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>A highly motivated and results-driven professional, I bring a dynamic blend of creativity, strategic thinking,
+            <br> and a collaborative mindset to every endeavor. With a background in Information Technology, I have honed
+            <br> my skills in Problem Solving, consistently delivering impactful results. Known for my adaptability and resilience,
+            <br> I thrive in fast-paced environments and excel in problem-solving, demonstrating a keen ability to navigate
+            <br> challenges and contribute innovative solutions. A dedicated team player with excellent communication and
+            <br> interpersonal skills, I am committed to achieving and exceeding organizational goals. My track record of success,
+            <br> coupled with a passion for continuous learning, positions me as a valuable asset poised to make significant contributions
+            <br> to any forward-thinking team or project.</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('background')">Background</p>
+              <p class="tab-links" onclick="opentab('interest')">Interest</p>
+              <p class="tab-links" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="background">
+              <ul>
+                <li><span>Birth Date</span><br>November 22,2003</li>
+                <li><span>Gender</span><br>Male</li>
+                <li><span>Email</span><br>soeb@students.nu-fairview.edu.ph</li>
+                <li><span>Nationality</span><br>Filipino</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="interest">
+              <ul>
+                <li><span>Games</span><br> Mostly Single-Player Games</li>
+                <li><span>Latest Technologies</span><br>PC and Laptop enthusiast</li>
+                <li><span>Sports</span><br>Basketball and Volleyball</li>
+                <li><span>Reading Books</span><br>Mostly Self-Help Books</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+              <ul>
+                <li><span>Communication Skills</span><br>Outstanding at negotiating</li>
+                <li><span>Critical Thinking</span><br>Looking at Other Perspective to easily execute solution</li>
+                <li><span>Time Management</span><br>Strategizing time to finish the requirements as soon as possible</li>
+                <li><span>Emotional Intelligence</span><br>Ability to recognize emotions from the workspace to maintain a non-toxic environment</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2022-Present</span><br>National University Fairview</li>
+                <li><span>2016-2022</span><br>First City Providential College</li>
+              </ul>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">Portfolio</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="encrypt.png">
+        <div class="layer">
+          <h3>Encryption Project</h3>
+        </div>
+      </div>
+      <div class="work">
+        <img src="database.png">
+        <div class="layer">
+          <h3>Database Project</h3>
+        </div>
+      </div>
+      <div class="work">
+        <img src="ETA.png">
+        <div class="layer">
+          <h3>Mobile App Project</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+  for (tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+  
+</body>
+</html>
